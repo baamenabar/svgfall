@@ -3,9 +3,8 @@
 	<head>
 		<meta charset=utf-8 />
 		<meta name="viewport" content="width=device-width,initial-scale=1">
-		<title>Picturefill</title>
-		<script src="external/matchmedia.js"></script>
-		<script src="picturefill.js"></script>
+		<title>SVGfall</title>
+		<script src="svgfall.js"></script>
 		<style>
 			body { font-family: sans-serif }
 			img {  max-width: 100% }
@@ -13,18 +12,15 @@
 	</head>
 	<body>
 		
-		<h1>Picturefill: A &lt;picture&gt; element polyfill</h1>
+		<h1>SVGfall: Reliable fallback for SVG images.</h1>
 				
-		<p>For more info: <a href="http://github.com/scottjehl/picturefill">see project home.</a></p>
+		<p>For more info: <a href="http://github.com/baamenabar/svgfall">see project home.</a></p>
 		
-		<div data-picture data-alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia">
-			<div data-src="external/imgs/small.jpg"></div>
-			<div data-src="external/imgs/medium.jpg" data-media="(min-width: 400px)"></div>
-			<div data-src="external/imgs/large.jpg" data-media="(min-width: 800px)"></div>
-			<div data-src="external/imgs/extralarge.jpg" data-media="(min-width: 1000px)"></div>
-
-			<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
-			<noscript><img src="external/imgs/small.jpg" alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia"></noscript>
+		<div data-svgfall data-alt="The Octocat, the Github mascot" data-width="400" data-height="400">
+			<div data-src="external/imgs/Octocat.svg" data-support="svg"></div>
+			<div data-src="external/imgs/Octocat.png" data-support="no-svg"></div>
+			<!-- Fallback content for non-JS browsers. -->
+			<noscript><img src="external/imgs/Octocat.png" alt="The Octocat, the Github mascot"></noscript>
 		</div>
 	</body>
 </html>
