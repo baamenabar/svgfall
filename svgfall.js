@@ -8,7 +8,7 @@
 	//do we have Modernizr? either way test for SVG.
 	w.hasSvgSupport='no-svg';
 	if(window.Modernizr !== undefined){
-		w.hasSvgSupport = Modenizr.svg ? 'svg' : 'no-svg';
+		w.hasSvgSupport = Modernizr.svg ? 'svg' : 'no-svg';
 	}
 	else{
 		var ns = {'svg': 'http://www.w3.org/2000/svg'};
