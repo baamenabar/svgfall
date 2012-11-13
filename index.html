@@ -1,0 +1,26 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<meta charset=utf-8 />
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>SVGfall</title>
+		<script src="svgfall.js"></script>
+		<style>
+			body { font-family: sans-serif }
+			img {  max-width: 100% }
+		</style>
+	</head>
+	<body>
+		
+		<h1>SVGfall: Reliable fallback for SVG images.</h1>
+				
+		<p>For more info: <a href="http://github.com/baamenabar/svgfall">see project home.</a></p>
+		
+		<div data-svgfall data-alt="The Octocat, the Github mascot" data-width="400" data-height="400">
+			<div data-src="external/imgs/Octocat.svg" data-support="svg"></div>
+			<div data-src="external/imgs/Octocat.png" data-support="no-svg"></div>
+			<!-- Fallback content for non-JS browsers. -->
+			<noscript><img src="external/imgs/Octocat.png" alt="The Octocat, the Github mascot"></noscript>
+		</div>
+	</body>
+</html>
