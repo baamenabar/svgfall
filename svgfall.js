@@ -7,7 +7,7 @@
 
 	//do we have Modernizr? either way test for SVG.
 	w.hasSvgSupport='no-svg';
-	if(window.Modernizr !== undefined){
+	if(window.Modernizr !== undefined && window.Modernizr.svg !== undefined){
 		w.hasSvgSupport = Modernizr.svg ? 'svg' : 'no-svg';
 	}
 	else{
@@ -41,7 +41,7 @@
 				// Find any existing img element in the picture element
 				var picImg = ps[ i ].getElementsByTagName( "img" )[ 0 ];
 
-				if( matches.length ){			
+				if( matches.length ){
 					if( !picImg ){
 						picImg = w.document.createElement( "img" );
 						picImg.alt = ps[ i ].getAttribute( "data-alt" );
