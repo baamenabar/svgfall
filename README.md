@@ -59,3 +59,10 @@ As you may sometimes want to control the image size in the markup you can set th
 
 SVGfall supports a broad range of browsers and devices (there are currently no known unsupported browsers), provided that you stick with the markup conventions provided. (based on picturefill's claim)
 
+## Further development or deployment
+
+This is easy to implement, pretty clean but it could be taken even further like some of the following implementations:
+
+* Render the fall-back PNG from the SVG on the server, cache it and serve that. For this to work you need *ImageMagik* which is not a default library on most shared servers with PHP, but it's pretty straight forward.
+* Check for support once, store a cookie, and replace the complicated markup to a regular image once you know if the device supports SVG or not.
+* We could also test for WebP support.
