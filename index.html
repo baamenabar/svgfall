@@ -5,6 +5,7 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<title>SVGfall</title>
 		<script src="svgfall.js"></script>
+		<script src="svgfall-s1.js"></script>
 		<style>
 			body { font-family: sans-serif }
 			img {  max-width: 100% }
@@ -24,5 +25,20 @@
 			<!-- Fallback content for non-JS browsers. -->
 			<noscript><img src="external/imgs/Octocat.png" alt="The Octocat, the Github mascot"></noscript>
 		</div>
+
+		<h2>Speed first version</h2>
+
+		<p>This version of the polyfill, favours SVG capable browsers, letting you add SVG in <code>&lt;img></code> elements with no further complicated markup, and taking advantage of browser look ahead preloaders. The script only kicks in when svg support fails.</p>
+		
+		<img src="external/imgs/Octocat.svg" data-svgfall alt="The Octocat, the Github mascot">
+		<noscript><img src="external/imgs/Octocat.png" alt="The Octocat, the Github mascot"></noscript>
+
+		<p>The script will try to look for an explicit alternative stored in the <code>data-fallback</code> data attribute, if it doesn't find the attribute, it will change the <code>.svg</code> extension in the <code>src</code> attribute and change it for <code>.png</code></p>
+
+
+		<img src="external/imgs/Octocat.svg" data-svgfall alt="The Octocat, the Github mascot" data-fallback="external/imgs/Octocat.jpg">
+		<noscript><img src="external/imgs/Octocat.png" alt="The Octocat, the Github mascot"></noscript>
+		
+		<p>You can always use <code>&lt;noscript></code> to add an alternative for browsers with disabled JavaScript, in any case, it can always show the <code>alt</code> attribute.</p>
 	</body>
 </html>
