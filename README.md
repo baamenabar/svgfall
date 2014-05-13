@@ -1,6 +1,6 @@
-# SVGfall Speed edition
+# SVGfall Speed edition (V2)
 
-A fast way to use SVG images with a reliable fallback, based on the [Picturefill](https://github.com/scottjehl/picturefill/) syntax using `div`s, for downloading fallback assets only when needed.
+A fast way to use SVG images with a reliable fallback, based on the [Picturefill](https://github.com/scottjehl/picturefill/) syntax using `img`s, for downloading fallback assets only when needed.
 
 * Author: Agustín Amenabar (c) 2014
 * License: MIT/GPLv2
@@ -9,7 +9,7 @@ A fast way to use SVG images with a reliable fallback, based on the [Picturefill
 
 ## Size and delivery
 
-Currently, `svgfall.js` compresses to around 458bytes (~0.44kb), after minify and gzip. To minify, you might try these online tools: [Yahoo Compressor]:(http://refresh-sf.com/yui/), or [Closure Compiler](http://closure-compiler.appspot.com/home). Serve with gzip compression.
+Currently, `svgfall-v2.js` compresses to around 458bytes (~0.44kb), after minify and gzip. To minify, you might try these online tools: [Yahoo Compressor]:(http://refresh-sf.com/yui/), or [Closure Compiler](http://closure-compiler.appspot.com/home). Serve with gzip compression.
 
 ## Markup pattern and explanation
 
